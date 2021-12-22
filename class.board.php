@@ -110,7 +110,7 @@ class OnlineChess_Board {
 	public function createGame(string $white, string $black) {
 		//TODO	
 		// On insere dans la table 'game' la nouvelle partie avec les identifiants black and white
-			$sql = "INSERT INTO game (white, black) VALUES (:white, :black)";
+			$sql = "INSERT INTO chess_game (white, black) VALUES (:white, :black)";
 			$query = $this->dbh->prepare($sql);
 			$query->bindParam(':white', $white, PDO::PARAM_INT);
 			$query->bindParam(':black', $black, PDO::PARAM_INT);
@@ -397,7 +397,7 @@ class OnlineChess_Board {
 		$gameId = $_SESSION['idgame'];
 		
 		//On récupère l'historique depius la table gamedata
-		$sql = "SELECT history FROM gamedata WHERE game = :game ORDER BY id ASC";
+		$sql = "SELECT history FROM chess_gamedata WHERE game = :game ORDER BY id ASC";
 		$query = $this->dbh->prepare($sql);
 		$query->bindParam(':game', $gameId, PDO::PARAM_INT);
 		$query->execute();

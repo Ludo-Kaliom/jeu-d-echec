@@ -13,23 +13,23 @@ if(strlen($_SESSION['login'])==0) {
 	
 	if (isset($_GET['del'])) {
 		$id = $_GET['del'];
-		$sql = "DELETE from game WHERE id=:id";
+		$sql = "DELETE from chess_game WHERE id=:id";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':id', $id, PDO::PARAM_INT);
 		$query-> execute();
 		
-		$sql2 = "DELETE FROM gamedata WHERE game=:id";
+		$sql2 = "DELETE FROM chess_gamedata WHERE game=:id";
 		$query2 = $dbh->prepare($sql2);
 		$query2->bindParam(':id', $id, PDO::PARAM_INT);
 		$query2-> execute();
 	}
 	
-	$sql = "SELECT * from game";
+	$sql = "SELECT * from chess_game";
 	$query = $dbh->prepare($sql);
 	$query->execute();
 	$results = $query->fetchAll(PDO::FETCH_OBJ);
 	
-	$sql = "SELECT id, login from player";
+	$sql = "SELECT id, login from chess_player";
 	$query2 = $dbh->prepare($sql);
 	$query2->execute();
 	$players = $query2->fetchAll(PDO::FETCH_OBJ);

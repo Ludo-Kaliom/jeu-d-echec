@@ -169,7 +169,7 @@ class OnlineChess_Interface {
 			$disabled = 'disabled="disabled"';
 		}
 
-		$html .= "\n".'<form method="post" id="OnlineChess_form style="margin: 20px 0px;"">';
+		$html .= "\n".'<form method="post" id="OnlineChess_form" style="margin: 20px 0px;">';
 		
 		$html .= "\n".'  <input type="hidden" name="mov_start" id="mov_start"';
 		$html .=                 ' value="' . (!empty($_POST['mov_start'])  ?  $_POST['mov_start']  :  "") . '" />';
@@ -228,9 +228,9 @@ class OnlineChess_Interface {
     }
         		
 
-    function _OnlineChess_Show(piece_color, piece_name) {
-        var text = "", color = ((piece_color == "white") ? "#ffd" : "#633"), html = "";		
-        html = "<span style=\"color: " + color + ";\" class=\"" + piece_color + "_piece\">" + text + "</span>";	
+    function _OnlineChess_Show(piece_color, piece_name) {       
+				var color = ((piece_color == "white") ? "#ffd" : "#633");		
+       var html = "<span style=\"color: " + color + ";\" class=\"" + piece_color + "_" + piece_name +"\"></span>";	
         document.write(html);
     }
       		

@@ -12,7 +12,7 @@ if(isset($_POST['signup'])) {
     $password = md5($_POST['password']);
     $dbh = new DataBase();
     // On pr�pare la requete d'insertion en base de donn�e de toutes ces valeurs dans la table tblreaders
-    $sql = "INSERT INTO player (login, password) VALUES (:login, :password)";
+    $sql = "INSERT INTO chess_player (login, password) VALUES (:login, :password)";
     $query = $dbh->prepare($sql);
     $query->bindParam(':login',$fname,PDO::PARAM_STR);
     $query->bindParam(':password',$password,PDO::PARAM_STR);

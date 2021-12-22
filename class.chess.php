@@ -136,7 +136,7 @@ class OnlineChess {
         $history = (string) $x_start.$y_start.$x_end.$y_end;
         
         // On ins�re le mouvement dans la base
-        $sql = "INSERT INTO gamedata (game, history) VALUES (:game, :history)";
+        $sql = "INSERT INTO chess_gamedata (game, history) VALUES (:game, :history)";
         $query = $this->dbh->prepare($sql);
         $query->bindParam(':game', $gameId, PDO::PARAM_INT);
         $query->bindParam(':history', $history, PDO::PARAM_STR);
@@ -157,7 +157,7 @@ class OnlineChess {
      */
     public function getPlayer() :string {
         // TODO On recupere le nombre de mouvements dans la table gamedata
-        $sql = "SELECT COUNT(*) FROM gamedata WHERE game=".$_SESSION['idgame'];
+        $sql = "SELECT COUNT(*) FROM chess_gamedata WHERE game=".$_SESSION['idgame'];
         $query = $this->dbh->prepare($sql);
         $query->execute();
         $res = $query->fetch(PDO::FETCH_ASSOC);

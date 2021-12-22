@@ -14,7 +14,7 @@ if(isset($_SESSION['login'])){
 	$password = md5($_POST['password']);
 	// On construit la requete qui permet de retrouver l'utilisateur
 	$dbh = new DataBase();
-	$sql = "SELECT * FROM player WHERE login=:name AND password=:password";
+	$sql = "SELECT * FROM chess_player WHERE login=:name AND password=:password";
 	$query = $dbh->prepare($sql);
 	$query->bindParam(':name', $name, PDO::PARAM_STR);
 	$query->bindParam(':password', $password, PDO::PARAM_STR);
@@ -59,16 +59,15 @@ if(isset($_SESSION['login'])){
 				<div class="panel panel-info">
 				<form name="form" method="post" action="index.php">
 
-					<div class="form-group">
-					<label >Votre login</label>
-
-					<h3>Compte de démonstration</h3>
+				<h3>Compte de démonstration</h3>
 					<p>Login : player1</p>
 					<p>Mot de passe : player1</p>
 
 					<p>Login : player2</p>
 					<p>Mot de passe : player2</p>
 					<hr>
+					<div class="form-group">
+					<label >Votre login</label>
 					<input type="text" class="form-control" placeholder="Nom" name="name" required />
 					</div>
 

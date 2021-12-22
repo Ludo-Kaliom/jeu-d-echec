@@ -18,3 +18,88 @@
         font-size: 60%;
         font-weight: normal;
       }
+			
+			
+.white_Pawn{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-image:url('../images_fancy/white_pawn.png');
+}	
+			
+.white_Rook{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-image:url('../images_fancy/white_rook.png');
+}
+
+.white_Knight{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-image:url('../images_fancy/white_knight.png');
+}	
+
+.white_Bishop{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-image:url('../images_fancy/white_bishop.png');
+}	
+
+.white_Queen{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-image:url('../images_fancy/white_queen.png');
+}	
+
+.white_King{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-image:url('../images_fancy/white_king.png');
+}			
+
+.black_Pawn{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-image:url('../images_fancy/black_pawn.png');
+}	
+			
+.black_Rook{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-image:url('../images_fancy/black_rook.png');
+}
+
+.black_Knight{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-image:url('../images_fancy/black_knight.png');
+}	
+
+.black_Bishop{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-image:url('../images_fancy/black_bishop.png');
+}	
+
+.black_Queen{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-image:url('../images_fancy/black_queen.png');
+}	
+
+.black_King{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background-image:url('../images_fancy/black_king.png');
+}	

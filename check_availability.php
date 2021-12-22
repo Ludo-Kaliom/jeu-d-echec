@@ -8,7 +8,7 @@ if(!empty($_GET["login"])){
     // On récupère dans $_GET le login soumis par l'utilisateur
 	$login = $_GET["login"];
     // On prépare la requete qui recherche la présence du login dans la table player
-	$sql = "SELECT login FROM player WHERE login=:login";
+	$sql = "SELECT login FROM chess_player WHERE login=:login";
 	$query = $dbh->prepare($sql);
 	$query->bindParam(':login', $login, PDO::PARAM_STR);
 	$query->execute();

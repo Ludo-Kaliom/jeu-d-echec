@@ -41,7 +41,7 @@ $chess->setImageDir("images/");
   <head>
     <?php if ($player != $_SESSION['login'] ){ ?>
   <!-- NB : ne refraichier la page que si le joueur attend son tour-->
-  	  <meta http-equiv="Refresh" content="5;url=game.php">
+  	<meta http-equiv="Refresh" content="5;url=game.php">
     <?php } ?>
 
     <title>Online Chess \_|_/</title>
