@@ -1,9 +1,9 @@
 <?php
 class DataBase extends PDO {
     private $DB_HOST = 'localhost';
-    private $DB_USER = 'khaliom';
-    private $DB_PASS  = 'KjzF=t5R';
-    private $DB_NAME  = 'khaliom';
+    private $DB_USER = '';
+    private $DB_PASS  = '';
+    private $DB_NAME  = '';
 
     function __construct() {
         try {
